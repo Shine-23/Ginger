@@ -1,3 +1,10 @@
+
 # Ginger
- Coffee Shop Website
-# Live Demo : https://ginger-coffeeshop.netlify.app/
+
+An ecommerce website for a coffee shop.
+
+Live Demo : https://ginger-coffeeshop.netlify.app/
+
+
+
+
