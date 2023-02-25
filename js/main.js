@@ -94,5 +94,37 @@ $("#navbarCollapse a").on('click', function(event) {
   } // End if
 
 });
+
+
+$(document).foundation();
+var $scrollReveal = $('.scroll-reveal');
+
+window.sr = ScrollReveal({
+  distance: 0,
+  scale: 1,
+  duration: 1000,
+  easing: 'cubic-bezier(0.77, 0, 0.175, 1)',
+  mobile: true
+});
+
+sr.reveal('.scroll-reveal');
+
+$.each($scrollReveal, function() {
+  sr.reveal(this, $(this).data());
+});
+
+$('a[href*="#"]:not([href="#"]):not([href="#show"]):not([href="#hide"]):not([href^="#panel"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+            $('html,body').animate({
+                scrollTop: target.offset().top
+            }, 1000);
+            return false;
+        }
+    }
+});s
+
 })(jQuery);
 
