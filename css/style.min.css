@@ -99,6 +99,8 @@
     line-height: inherit;
   }
   
+
+
   ol,
   ul,
   dl {
@@ -151,10 +153,12 @@
     top: -.5em;
   }
   
-  a {
+  a,button{
     color: #DA9F5B;
     text-decoration: none;
     background-color: transparent;
+    touch-action: manipulation;
+    transition:all 0.3s;
   }
   
   a:hover {
